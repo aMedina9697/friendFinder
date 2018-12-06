@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Friend Finder</title>
+    <title>Christmas Themed Friend Finder</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -120,7 +120,9 @@
       </select>
 
       <h3><strong>Question 8</strong></h3>
-      <h4>You prefer taking a vacation to somewhere warm during the holidays.</h4>
+      <h4>
+        You prefer taking a vacation to somewhere warm during the holidays.
+      </h4>
       <select data-placeholder="" class="chosen-select" id="q8">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -132,7 +134,8 @@
 
       <h3><strong>Question 9</strong></h3>
       <h4>
-        Singing along to "All I Want For Christmas Is You", is right up your alley.
+        Singing along to "All I Want For Christmas Is You", is right up your
+        alley.
       </h4>
       <select data-placeholder="" class="chosen-select" id="q9">
         <option value=""></option>
@@ -144,9 +147,7 @@
       </select>
 
       <h3><strong>Question 10</strong></h3>
-      <h4>
-        You hate Christmas.
-      </h4>
+      <h4>You hate Christmas.</h4>
       <select data-placeholder="" class="chosen-select" id="q10">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -191,11 +192,7 @@
           </div>
           <div class="modal-body">
             <h2 id="matchName"></h2>
-            <img
-              id="matchImg"
-              src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg"
-              alt=""
-            />
+            <img id="matchImg" src="" alt="" />
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -253,7 +250,7 @@
             ]
           };
           // Grab the URL of the website
-          let currentURL = window.location.origin;
+          const currentURL = window.location.origin;
           // AJAX post the data to the friends API.
           $.post(currentURL + "/api/friends", userData, function(data) {
             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
